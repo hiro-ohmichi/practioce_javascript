@@ -1,7 +1,7 @@
 class DefaultMapCustom extends Map {
   defaultValue: number | string;
   constructor(defaultValue: number | string) {
-    super();
+    super(); // Mapのコンストラクタをnewキーワードを使って呼び出す
     this.defaultValue = defaultValue;
   }
 
@@ -15,8 +15,8 @@ class DefaultMapCustom extends Map {
 }
 
 class Histogram {
-  letterCounts: DefaultMapCustom;
   totalLetters: number;
+  letterCounts: DefaultMapCustom;
   constructor() {
     this.letterCounts = new DefaultMapCustom(0);
     this.totalLetters = 0;
