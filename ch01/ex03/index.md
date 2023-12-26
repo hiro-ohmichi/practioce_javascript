@@ -1,19 +1,3 @@
-# 練習問題: 1 章
-
-## 問題 1.1 💻
-
-hello.js を作成し Node.js で実行し「Hello, World!」が表示されることを確認しなさい。
-
-**出題範囲**: 1.2
-
-## 問題 1.2 💻
-
-hello.html および hello.js を作成し、hello.html を Web ブラウザで開くと開発者ツールのコンソール上に「Hello, World!」が表示されることを確認しなさい。
-
-index.html　参照
-
-**出題範囲**: 1.2
-
 ## 問題 1.3 🖋️
 
 Web ブラウザに以下の URL のブックマークを追加しなさい。追加したブックマークを開くと何が起こるか確認し結果を記載しなさい。
@@ -39,7 +23,7 @@ javascript:alert("Hello, World!")
   <body>
     <script>
       let life = { answer: 42 };
-      console.log(life);
+      console.log("%o", life);
       life.answer = 0;
       console.log(life);
     </script>
