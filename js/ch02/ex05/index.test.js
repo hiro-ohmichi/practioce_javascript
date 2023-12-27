@@ -1,6 +1,8 @@
 import { promisify } from "util";
 import { exec } from "child_process";
 
+//windowsでは動作しないので編集
+
 describe("charfreq", () => {
   it("変更前と結果が同じであること", async () => {
     const stdout = await promisify(exec)(

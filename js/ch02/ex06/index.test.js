@@ -1,5 +1,4 @@
 import { fizzbuzz } from "./index.js";
-
 describe("FizzBuzz", () => {
   it("1から100までのFizzBuzzの結果を返すこと", () => {
     const actual = fizzbuzz();
