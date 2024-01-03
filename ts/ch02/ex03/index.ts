@@ -9,7 +9,8 @@ utf-8? utf-16なのが気になる
 >>> ^Z
 */
 
-const text = "パン";
+// パン
+const text = "\u3071\u3093";
 
 const nfc = text.normalize("NFC");
 const nfd = text.normalize("NFD");
@@ -22,7 +23,10 @@ function stringToUnicodeEscape(s: string): string {
     .join("");
 }
 
+// 見た目は同じだがunicodeが違う
 console.log(nfc);
 console.log(stringToUnicodeEscape(nfc));
 console.log(nfd);
 console.log(stringToUnicodeEscape(nfd));
+
+//なんでこんなのいるの？正準等価性と互換等価性で判定したいときに利用する
