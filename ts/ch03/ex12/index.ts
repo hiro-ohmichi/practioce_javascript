@@ -1,5 +1,6 @@
-const obj1: Record<string, number> = { x: 1, y: 2, z: 3 };
-const obj2: Record<string, number> = { x: 1, y: 2, z: 3 };
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const obj1: Record<any, number> = { x: 1, y: 2, z: 3 };
+const obj2: Record<any, number> = { x: 1, y: 2, z: 3 };
 console.log(obj1 === obj2);
 
 obj1.y2 = 3;
