@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// Record に限定
 const obj1: Record<any, number> = { x: 1, y: 2, z: 3 };
 const obj2: Record<any, number> = { x: 1, y: 2, z: 3 };
 console.log(obj1 === obj2);
