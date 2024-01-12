@@ -1,5 +1,5 @@
 export function convertLFtoCRLF(LFstr: string) {
-  return LFstr.replace(/\n/g, "\r\n");
+  return LFstr.replace(/(?<!\r)\n/g, "\r\n");
 }
 
 export function convertCRLFtoLF(CRLFstr: string) {
