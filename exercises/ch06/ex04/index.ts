@@ -6,9 +6,9 @@ const object1: ObjInfo = new Object();
 
 Object.defineProperty(object1, "property1", {
   value: 42,
-  writable: false,
-  configurable: false,
-  enumerable: false,
+  writable: false, // true である場合のみ、プロパティに関連づけられた値は代入演算子で変更することができます
+  configurable: false, //true である場合のみ、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます
+  enumerable: false, //true である場合のみ、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます
 });
 
 const object2: ObjInfo = new Object();
