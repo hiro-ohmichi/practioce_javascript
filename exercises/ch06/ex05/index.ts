@@ -25,3 +25,8 @@ Object.defineProperty(protoObject, "o", {
   configurable: false,
   enumerable: false,
 });
+
+//for inの順番、数字→文字列→継承元の順番で回ってくる
+for (const i in obj) {
+  console.log(i);
+}
