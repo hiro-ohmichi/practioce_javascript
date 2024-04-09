@@ -4,7 +4,8 @@ function fizzbuzz(n: number) {
   let modifiedRow = row.map((val) => (val % 15 === 0 ? "FizzBuzz" : val));
   modifiedRow = modifiedRow.map((val) => (val % 3 === 0 ? "Fizz" : val));
   modifiedRow = modifiedRow.map((val) => (val % 5 === 0 ? "Buzz" : val));
-  modifiedRow.map((val) => console.log(val));
+  // for each にしたほうがいい mapは配列の値を変えるために使うもの。
+  modifiedRow.forEach((val) => console.log(val));
 }
 fizzbuzz(20);
 

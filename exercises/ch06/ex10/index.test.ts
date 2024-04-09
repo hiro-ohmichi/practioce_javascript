@@ -33,6 +33,16 @@ const answer = {
   ...obj,
 };
 
+// 正しい書きかた
+const answer2 = {
+  num1,
+  num2,
+  ...obj1,
+  ...obj3,
+  ...obj2,
+  arr: [...arr1, num1, ...arr2],
+};
+
 // テスト (equalの特性上通るが中身は全然違う)
 describe("equal", () => {
   test("equal", () => {

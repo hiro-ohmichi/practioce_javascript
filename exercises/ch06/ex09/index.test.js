@@ -10,7 +10,9 @@ const obj = {
 };
 
 //ここに何か足す
-obj.sum = obj.sum();
+//obj.sum = obj.sum();
+// 答え
+obj["sum"].toJSON = () => obj.sum();
 
 obj.x = 1;
 obj.y = 2;

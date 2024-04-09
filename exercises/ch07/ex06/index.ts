@@ -20,7 +20,7 @@ data.sort((a, b) => {
   }
 });
 
-data.map((val) => {
+data.forEach((val) => {
   console.log(val);
 });
 
