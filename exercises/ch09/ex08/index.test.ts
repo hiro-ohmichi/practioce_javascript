@@ -34,9 +34,9 @@ const transitionTable: Record<
   },
   alarmSounding: {
     setAlarm: { nextState: "alarmSounding", action: "soundAlarm" },
-    cancelAlarm: { nextState: "normal", action: "none" },
+    cancelAlarm: { nextState: "normal", action: "stopAlarm" },
     reachedToAlarmTime: { nextState: "alarmSounding", action: "soundAlarm" },
-    snooze: { nextState: "snoozing", action: "none" },
+    snooze: { nextState: "snoozing", action: "stopAlarm" },
     elapseSnoozeTime: { nextState: "alarmSounding", action: "soundAlarm" },
   },
   snoozing: {
@@ -75,12 +75,11 @@ function changeState(alarmClock: AlarmClock, state: State) {
 describe("test object2", () => {
   for (const [key, value] of Object.entries(transitionTable)) {
     const alarmClock = new AlarmClock();
-    changeState(alarmClock, key as State);
-
     for (const [subKey, subValue] of Object.entries(value)) {
       test(`状態${key}のとき${subKey}を実行した時のテスト`, () => {
+        changeState(alarmClock, key as State);
         const actionResult = alarmClock[subKey as EventName]();
-        //expect(actionResult).toBe(subValue.action);
+        expect(actionResult).toBe(subValue.action);
         expect(alarmClock.getState()).toBe(subValue.nextState);
       });
     }
