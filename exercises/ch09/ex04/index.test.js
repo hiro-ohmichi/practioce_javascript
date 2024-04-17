@@ -12,12 +12,12 @@ describe("test object", () => {
   });
 
   test("warrior2クラス", () => {
-    const warriorClass2 = Warrior2(123);
-    expect(warriorClass2.attack).toBe(246);
+    const warriorClass2 = new Warrior2(123);
+    expect(warriorClass2.attack()).toBe(246);
   });
 
   test("magicWorrier2クラス", () => {
-    const magicWarriorClass2 = MagicWarrior2(123, 11);
-    expect(magicWarriorClass2.attack).toBe(257);
+    const magicWarriorClass2 = new MagicWarrior2(123, 11);
+    expect(magicWarriorClass2.attack()).toBe(257);
   });
 });
