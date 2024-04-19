@@ -1,5 +1,5 @@
 export class C {
-  value: number;
+  private value: number;
   constructor() {
     this.value = 0;
   }

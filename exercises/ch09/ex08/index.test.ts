@@ -74,9 +74,9 @@ function changeState(alarmClock: AlarmClock, state: State) {
 
 describe("test object2", () => {
   for (const [key, value] of Object.entries(transitionTable)) {
-    const alarmClock = new AlarmClock();
     for (const [subKey, subValue] of Object.entries(value)) {
       test(`状態${key}のとき${subKey}を実行した時のテスト`, () => {
+        const alarmClock = new AlarmClock();
         changeState(alarmClock, key as State);
         const actionResult = alarmClock[subKey as EventName]();
         expect(actionResult).toBe(subValue.action);
