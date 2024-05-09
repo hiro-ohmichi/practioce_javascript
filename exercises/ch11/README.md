@@ -7,9 +7,9 @@
 class Foo {}
 
 const typeMap = new TypeMap();
+typeMap.set(Foo, new Foo());
 typeMap.set(String, "string");
 typeMap.set(Number, 123);
-typeMap.set(Foo, new Foo());
 typeMap.set(Date, "not a date"); // -> Error
 
 typeMap.get(String); // -> "string"
