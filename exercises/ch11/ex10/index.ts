@@ -1,5 +1,4 @@
 export function getDaysInMonth(year: number, month: number) {
-  // 謎：2月を知りたかったらmonth=3にしないとダメだと思ったが、そうではなかった
   return new Date(year, month, 0).getDate();
 }
 

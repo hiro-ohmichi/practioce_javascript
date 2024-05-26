@@ -8,6 +8,7 @@ export function sortJapanese(arr) {
 }
 
 export function toJapaneseDateString(date) {
+  // option datestyle: long でいけた
   const options = {
     era: "long",
     year: "numeric",

@@ -4,7 +4,7 @@ export class TypeMap {
   }
 
   set(key, value) {
-    if (!(value instanceof key)) {
+    if (!(Object.getPrototypeOf(value) != key.prototype)) {
       throw new Error(`Value ${value} is not an instance of ${key.name}`);
     }
     this.map.set(key, value);
