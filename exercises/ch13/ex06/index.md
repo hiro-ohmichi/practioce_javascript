@@ -1,0 +1,7 @@
+jQuery.Deferredが生成するオブジェクトで、DeferredはPromiseを内包しています。DeferredとPromiseは常に1対1で作成され、対応するDeferredだけがPromiseの内部状態を変更できます。
+
+DeferredからPromiseだけを抜き出すことで、カプセル化して内部状態を勝手に変更できないようにしているのです。
+
+$.Deferred()でDeferredオブジェクトを作る
+非同期処理が終わったら作ったDeferredオブジェクトの状態を変更するように設定しつつ、処理を開始
+Deferredオブジェクトが持っているPromiseオブジェクトを即座にreturnする
