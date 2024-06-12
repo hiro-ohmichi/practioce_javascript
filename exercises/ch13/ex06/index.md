@@ -5,3 +5,5 @@ DeferredからPromiseだけを抜き出すことで、カプセル化して内�
 $.Deferred()でDeferredオブジェクトを作る
 非同期処理が終わったら作ったDeferredオブジェクトの状態を変更するように設定しつつ、処理を開始
 Deferredオブジェクトが持っているPromiseオブジェクトを即座にreturnする
+
+後で進める
